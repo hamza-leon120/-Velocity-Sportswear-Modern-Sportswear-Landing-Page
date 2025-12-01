@@ -1,0 +1,18 @@
+
+mixin button(one) 
+    .button
+        a(link = "#")= one
+
+mixin card(one,two,three,four)
+    .card 
+        img(src= one, alt= four)
+        div 
+            p= two 
+            p= three
+
+mixin foot(one,two,three,four)
+    ul 
+        li: a(href = "#")= one
+        li: a(href = "#")= two
+        li: a(href = "#")= three
+        li: a(href = "#")= four

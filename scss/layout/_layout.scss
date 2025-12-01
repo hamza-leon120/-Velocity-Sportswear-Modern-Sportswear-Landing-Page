@@ -1,0 +1,38 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Work Sans", sans-serif;
+    font-optical-sizing: auto;
+}
+
+.container {
+    margin: 0px auto;
+
+    @media (max-width : 767px) {
+        & {
+            padding: 0px 20px;
+        }
+    }
+
+    @media (min-width : 768px) {
+        & {
+            width: 750px;
+        }
+    }
+
+    @media (min-width : 992px) {
+        & {
+            width: 970px;
+        }
+    }
+
+    @media (min-width : 1200px) {
+        & {
+            width: 1170px;
+        }
+    }
+}

@@ -1,0 +1,530 @@
+@use "./layout/layout";
+@use "./mixin/mixin" as *;
+@use "./var/_var.scss" as *;
+
+header {
+    .container {
+        height: 59px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        .logo {
+            display: flex;
+            align-items: center;
+
+            i {
+                font-size: 24px;
+                color: $color-one;
+                margin-right: 8px;
+            }
+
+            p {
+                color: $color-one;
+
+                font: {
+                    size: 14px;
+                    weight: 600;
+                }
+            }
+        }
+
+        .side-bar {
+            @include medai(mobail) {
+                height: 0px;
+                overflow: hidden;
+                position: absolute;
+                left: 0px;
+                top: 59px;
+                background-color: white;
+                flex-direction: column;
+                width: 100%;
+                border-radius: 0px 0px 30px 30px;
+                transition: height 0.5s;
+            }
+
+            display: flex;
+            align-items: center;
+
+            ul {
+                list-style: none;
+
+                @include medai(mobail) {
+                    width: 100%;
+                }
+
+                li {
+                    @include medai(mobail) {
+                        display: block;
+                        margin-bottom: 30px;
+                        width: 100%;
+                        text-align: center;
+                        height: 38px;
+                        border-bottom: 2px solid black;
+                        &:nth-child(1) {
+                            margin-top: 30px;
+                        }
+                    }
+
+                    display: inline-block;
+                    margin-right: 12px;
+
+                    a {
+                        text-decoration: none;
+                        color: $color-one;
+
+                        font: {
+                            size: 12px;
+                            weight: 600;
+                        }
+
+                        @include medai (mobail) {
+                            font-size: 15px;
+                        }
+                    }
+                }
+            }
+
+            .button:nth-child(2) {
+                @include button(132px, 43px, 12px);
+                border: 1px solid $color-one;
+                background-color: transparent;
+                color: $color-one;
+            }
+
+            .button:nth-child(3) {
+                @include button(132px, 43px, 12px);
+                margin-left: 12px;
+            }
+
+            .button {
+                @include medai(mobail) {
+                    width: 60% !important;
+                    margin: 0px 0px 10px 0px !important;
+                }
+            }
+        }
+
+        >i {
+            display: none;
+
+            @include medai (mobail) {
+                display: block;
+                color: $color-one;
+                font-size: 30px;
+                cursor: pointer;
+            }
+
+        }
+    }
+}
+
+.unleash-your-speed {
+    background-color: $color-one;
+    padding: 64px 0px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+
+        @include medai(mobail) {
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .first {
+            width: 576px;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            h2 {
+                color: #F5F5F4;
+
+                font: {
+                    size: 67px;
+                    weight: bold;
+                }
+
+                margin-bottom: 16px;
+
+                @include medai(mobail) {
+                    font-size: 60px;
+                }
+            }
+
+            p {
+                font-size: 22px;
+                color: #E7E5E4;
+                margin-bottom: 40px;
+            }
+
+            .button {
+                @include button(360px, 57px, 18px);
+
+            }
+
+            @include medai(max-medium) {
+                margin-bottom: 48px;
+            }
+
+            @include medai(mobail) {
+                width: 100%;
+                align-items: center;
+                text-align: center;
+            }
+        }
+
+        img {
+            border-radius: 16px;
+            height: 704px;
+
+            @include medai(max-medium) {
+                width: 350px;
+                margin-left: 43px;
+            }
+
+            @include medai(mobail) {
+                width: 100%;
+                margin: 0;
+                height: auto;
+            }
+        }
+    }
+}
+
+.our-philosophy {
+    padding: 80px 0px;
+
+    .container {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        .all {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 80px;
+
+            @include medai(mobail) {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .first {
+                width: 50%;
+                text-align: center;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                margin-right: 48px;
+
+                @include medai(mobail) {
+                    width: 100%;
+                    margin: 0 0 48px 0;
+                }
+
+                h2 {
+                    font: {
+                        size: 28px;
+                        weight: bold;
+                    }
+
+                    color: #EC4899;
+                    margin-bottom: 8px;
+                }
+
+                p {
+                    color: $color-two;
+                    font-size: 38px;
+                }
+            }
+
+            img {
+                width: 50%;
+                height: 720px;
+
+                @include medai(mobail) {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+
+        >img {
+            width: 80%;
+            height: 32px;
+            margin: 0 auto;
+
+            @include medai(mobail) {
+                width: 100%;
+            }
+        }
+
+    }
+}
+
+.featured-collections {
+    padding: 120px 0;
+
+    .container {
+        .first {
+            margin-bottom: 40px;
+            text-align: center;
+
+            i {
+                font-size: 32px;
+                color: $color-two;
+            }
+
+            h2 {
+                font: {
+                    size: 51px;
+                    weight: bold;
+                }
+
+                color: $color-one;
+                margin: 8px 0;
+            }
+
+            p {
+                font-size: 18px;
+                color: $color-two;
+            }
+        }
+
+        .secound {
+            display: grid;
+            gap: 24px;
+            grid-template-columns: repeat(3, 1fr);
+            grid-template-rows: repeat(3, 1fr);
+            grid-template-areas:
+                "ch-1 ch-2 ch-3"
+                "ch-4 ch-5 ch-6"
+                "ch-7 ch-8 ch-9"
+            ;
+
+            @include medai (max-medium) {
+                grid-template-columns: repeat(2, 1fr);
+                grid-template-rows: repeat(6, 1fr);
+                grid-template-areas:
+                    "ch-1 ch-2"
+                    "ch-3 ch-3"
+                    "ch-4 ch-5"
+                    "ch-6 ch-6"
+                    "ch-7 ch-8"
+                    "ch-9 ch-9"
+                ;
+            }
+
+            @include medai(mobail) {
+                grid-template-columns: repeat(1, 1fr);
+                grid-template-rows: repeat(9, 1fr);
+                grid-template-areas:
+                    "ch-1"
+                    "ch-2"
+                    "ch-3"
+                    "ch-4"
+                    "ch-5"
+                    "ch-6"
+                    "ch-7"
+                    "ch-8"
+                    "ch-9"
+                ;
+            }
+
+            @for $i from 1 through 9 {
+                &>div:nth-child(#{$i}) {
+                    grid-area: ch-#{$i};
+                }
+            }
+
+            .card {
+                background-color: #FAFAF9;
+                border-radius: 8px;
+
+                img {
+                    width: 100%;
+                    height: 312px;
+                    border-radius: 8px;
+                }
+
+                div {
+                    padding: 16px;
+
+                    p:nth-child(1) {
+                        font-size: 14px;
+                        color: $color-one;
+                    }
+
+                    p:nth-child(2) {
+                        font-size: 14px;
+                        color: $color-one;
+                        margin-top: 8px;
+                    }
+                }
+            }
+
+        }
+    }
+}
+
+.join {
+    padding: 120px 0px;
+
+    .container {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+
+        @include medai(mobail) {
+            flex-direction: column;
+            text-align: center;
+        }
+
+        .first {
+            width: 440px;
+            height: 440px;
+            border-radius: 100%;
+            margin-right: 50px;
+
+            @include medai(mobail) {
+                width: 100%;
+                margin: 0;
+                margin-bottom: 24px;
+            }
+
+            img {
+                width: 100%;
+                height: 100%;
+
+                @include medai (mobail) {
+                    height: 390px;
+                    width: 80%;
+                }
+            }
+        }
+    }
+
+    .secound {
+        h2 {
+            font: {
+                size: 51px;
+                weight: bold;
+            }
+
+            color: $color-one;
+        }
+
+        p {
+            font-size: 18px;
+            color: $color-two;
+            margin: 16px 0 32px 0;
+        }
+
+        .button {
+            @include button(360px, 57px, 18px);
+
+            @include medai(mobail) {
+                margin: auto;
+
+            }
+        }
+    }
+}
+
+
+footer {
+    margin: 48px 0px;
+
+    .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+
+        @include medai (mobail) {
+            flex-direction: column;
+        }
+
+        .first {
+            @include medai (mobail) {
+                margin-bottom: 56px;
+                text-align: center;
+            }
+
+            div {
+                display: flex;
+                align-items: center;
+                margin-bottom: 24px;
+
+                i {
+                    font-size: 32px;
+                    color: $color-one;
+                }
+
+                p {
+                    color: $color-one;
+                    font-size: 14px;
+                    font-weight: 600;
+                    margin-left: 8px;
+                }
+            }
+
+            >p {
+                color: $color-one;
+                font-size: 18px;
+            }
+        }
+
+        .secound {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 40px;
+
+            @include medai (mobail) {
+                width: 100%;
+            }
+
+            ul {
+                list-style: none;
+
+                @include medai (mobail) {
+                    text-align: center;
+                }
+
+                li:nth-child(1) {
+                    a {
+                        color: $color-one;
+                        font-weight: 600;
+                    }
+                }
+
+                li {
+                    margin-bottom: 16px;
+
+                    a {
+                        text-decoration: none;
+                        font-size: 14px;
+                        color: $color-two;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.button-up {
+    display: none;
+    bottom: 25px;
+    right: 25px;
+    background-color: #EC4899;
+    color: #FAFAF9;
+    width: 47px;
+    height: 47px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 11px;
+    font-size: 21px;
+    cursor: pointer;
+}

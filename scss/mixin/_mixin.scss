@@ -1,0 +1,53 @@
+@mixin medai ($point) {
+    @if $point ==mobail {
+        @media (max-width : 767px) {
+            @content;
+        }
+    }
+
+    @else if $point ==small {
+        @media (min-width : 768px) {
+            @content;
+        }
+    }
+
+    @else if $point ==max-medium {
+        @media (max-width : 992px) {
+            @content;
+        }
+    }
+
+    @else if $point ==medium {
+        @media (min-width : 992px) {
+            @content;
+        }
+    }
+
+    @else if $point ==max-large {
+        @media (max-width : 1200px) {
+            @content;
+        }
+    }
+
+    @else if $point ==large {
+        @media (min-width : 1200px) {
+            @content;
+        }
+    }
+}
+
+@mixin button ($w, $h, $si) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: $w;
+    height: $h;
+    background-color: #EC4899;
+    color: #FAFAF9;
+    border-radius: 4px;
+    font-size: $si;
+    cursor: pointer;
+    @include medai(mobail) {
+        width: 90%;
+    }
+}

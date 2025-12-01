@@ -1,0 +1,86 @@
+include include/mixin
+doctype html
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        // css
+        link(rel="stylesheet" href = "./scss/style.css")
+        // font
+        link(rel='preconnect' href='https://fonts.googleapis.com')
+        link(rel='preconnect' href='https://fonts.gstatic.com' crossorigin='')
+        link(href='https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&family=Work+Sans:ital,wght@0,100..900;1,100..900&display=swap' rel='stylesheet')
+        // icon
+        link(rel="stylesheet" href = "./css/all.min.css")
+        // normalize
+        link(rel="stylesheet" href = "./css/normalize.css")
+        title Document
+    body 
+        header 
+            .container 
+                .logo 
+                    i(class = "fa-solid fa-bolt")
+                    p Velocity Sportswear
+                .side-bar 
+                    ul 
+                        li: a(href="#") Start
+                        li: a(href="#") Heritage
+                        li: a(href="#") Our Athletes
+                    +button("Member Login")
+                    +button("Join Velocity")
+                i(class="fa-solid fa-bars-staggered")
+        section(class = "unleash-your-speed")
+            .container 
+                .first 
+                    h2 Unleash Your Speed
+                    p Gear up for greatness.
+                    +button("Shop Now")
+                img(src="./img/Image-1.jpg", alt="A young woman with long dark hair smiles at the camera") 
+        section(class = "our-philosophy")
+            .container 
+                .all 
+                    .first
+                        h2 Our Philosophy
+                        p We are committed to enhancing athletic performance through innovative sportswear that's built to last.
+                    img(src="./img/Mission-Image.jpg", alt="Illustration of a serene sunset sky with birds soaring")
+                img(src="./img/Vector.jpg", alt="Thin aerial view of a black and white symmetrical shape")
+        section(class="featured-collections")
+            .container 
+                .first
+                    i(class="fa-solid fa-arrows-rotate")
+                    h2 Featured Collections
+                    p Curated for champions.
+                .secound
+                    +card("./img/mage-2.jpg","Pro Track Shoes","Engineered for optimal traction and speed.","Minimalist skincare packaging in cylindrical shapes on a yellow and blue background")
+                    +card("./img/mage-3.jpg","Endurance Wear","Withstand the rigors of intense training.","A young person with wet hair and a serious expression")
+                    +card("./img/mage-4.jpg","Hydro Repel Tech","Stay dry with cutting-edge fabric technology.","Indoor swimming pool filled with water, surrounded by a cheering crowd on bleacher")
+                    +card("./img/mage-5.jpg","ErgoFit Apparel","Tailored for motion, comfort, and performance.","A pensive elderly man with a weathered face and gray beard gazes into the distance")
+                    +card("./img/mage-6.jpg","Smart Sensors","Track your stats with integrated technology.","A person walks along a stone pier at sunset, set against a vibrant orange sky")
+                    +card("./img/mage-7.jpg","Thermal Regulate","Maintain your core temp in any climate.","A solitary wooden house sits on a dock, surrounded by misty water, creating a serene reflection.")
+                    +card("./img/mage-8.jpg","Impact Protectors","Guard against injuries with strategic padding.","A serene desert scene at sunset with blue dunes under a pink sky, and a crescent moon above. ")
+                    +card("./img/mage-9.jpg","Aero Dynamics","Maximize your speed with wind-resistant design.","A vibrant school of orange fish swims around a sunken shipwreck")
+                    +card("./img/mage-10.jpg","Flexi Stretch","Unrestricted movement for full agility.","A lone figure stands in a dimly lit, empty arena, with beams of bright light shining down from above")
+        section(class="join")
+            .container 
+                .first 
+                    img(src="./img/mage-11.jpg", alt="Smiling woman with curly hair and glasses in a casual outfit, sits in a modern, busy office space")
+                .secound
+                    h2 Join the Velocity Elite
+                    p Exclusive deals for fitness enthusiasts.
+                    +button("Become a Member")
+        footer 
+            .container 
+                .first 
+                    div 
+                        i(class="fa-regular fa-heart")
+                        p Velocity Sportswear
+                    p HMZ
+                .secound 
+                    +foot("Velocity","Our Story","Join Our Team","Latest News")
+                    +foot("Technologies","UltraSpeed Tech","Performance Gear","Media Centre")
+                    +foot("Connect","@VelocityGear","@VelocityWear","Community Forum")
+        .button-up 
+            i(class="fa-solid fa-arrow-up")
+        script(src="./main.js")
+
+
