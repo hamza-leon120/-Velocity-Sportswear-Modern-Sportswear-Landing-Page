@@ -25,6 +25,6 @@ View the website online:
 
 ## 🛠️ How to Run Locally
 ```bash
-git clone [https://github.com/hamza-leon120/ROLEX-website](https://github.com/hamza-leon120/-Velocity-Sportswear-Modern-Sportswear-Landing-Page).git
+git clone https://github.com/hamza-leon120/-Velocity-Sportswear-Modern-Sportswear-Landing-Page.git
 cd ROLEX-website
 open index.html
