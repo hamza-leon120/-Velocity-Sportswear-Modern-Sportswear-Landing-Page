@@ -34,5 +34,5 @@ View the website online:
 ## 🛠️ How to Run Locally
 ```bash
 git clone https://github.com/hamza-leon120/-Velocity-Sportswear-Modern-Sportswear-Landing-Page.git
-cd ROLEX-website
+cd velocity-sportswear-website
 open index.html
