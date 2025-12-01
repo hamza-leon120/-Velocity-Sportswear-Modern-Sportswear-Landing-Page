@@ -16,8 +16,10 @@ View the website online:
 
 ## 📸 Screenshots
 - 🖥️ Desktop
+
 ![Desktop Mode](img/Screenshot.png)
 - 📱 mobail
+
 ![mobail](img/Screenshot-mobail.png)
 
 ## ✨ Features
