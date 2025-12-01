@@ -16,9 +16,9 @@ View the website online:
 
 ## 📸 Screenshots
 - 🖥️ Desktop
-[Desktop Mode](img/Screenshot.png)
+![Desktop Mode](img/Screenshot.png)
 - 📱 mobail
-[mobail](img/Screenshot-mobail.png)
+![mobail](img/Screenshot-mobail.png)
 
 ## ✨ Features
 - Fully responsive layout (mobile-first design)
